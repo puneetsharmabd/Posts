@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:layout_marginRight="16dp"
+    tools:context=".view.DetailFragment">
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/searchListDetail"
+        android:hint="Search Comments"
+        android:layout_height="wrap_content">
+    </EditText>
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Title:"
+        android:layout_below="@+id/searchListDetail"
+        android:id="@+id/titleText"
+        android:layout_marginTop="10dp"
+        style="@style/Title"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <TextView
+        android:id="@+id/postTitle"
+        style="@style/Title"
+        android:layout_below="@+id/searchListDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/titleText"
+        android:paddingLeft="16dp"
+        android:text="Dummy Title"></TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Post"
+        android:layout_below="@+id/postTitle"
+        android:id="@+id/postBody"
+        android:layout_marginTop="10dp"
+        style="@style/Text"
+        android:layout_height="wrap_content">
+    </TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Comments:"
+        android:id="@+id/commentText"
+        android:layout_below="@+id/postBody"
+        android:layout_marginTop="10dp"
+        style="@style/Title"
+        android:layout_height="wrap_content">
+    </TextView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/commentList"
+        android:layout_below="@+id/commentText"
+        android:layout_marginTop="10dp"
+        android:layout_height="match_parent">
+    </androidx.recyclerview.widget.RecyclerView>
+</RelativeLayout>
+</layout>
